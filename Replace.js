@@ -8,7 +8,10 @@ var replace = require('replace');
 
 // Find file(s)
 glob('exe-1.txt', function(err, files) {
-    if (err) { throw err; }
+    if (err) 
+    { 
+        throw err; 
+    }
     files.forEach(function(item, index, array) {
           console.log(item + ' found');
           // Read file
