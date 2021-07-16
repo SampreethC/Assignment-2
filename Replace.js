@@ -6,7 +6,7 @@ var glob = require('glob');
 var fs = require('fs');
 var replace = require('replace');
 
-// Find file(s)
+
 glob('exe-1.txt', function(err, files) {
     if (err) 
     { 
@@ -14,9 +14,9 @@ glob('exe-1.txt', function(err, files) {
     }
     files.forEach(function(item, index, array) {
           console.log(item + ' found');
-          // Read file
+          //Display file content
           console.log(fs.readFileSync(item,'utf8'));
-          // Find and Replace string
+          // Find and Replace the string in file
           replace({
               regex: 'See',
               replacement: 'Saw',
@@ -25,7 +25,7 @@ glob('exe-1.txt', function(err, files) {
               silent: true
           });
           console.log('Replacement complete');
-          // Read file
+          // Display file content
           console.log(fs.readFileSync(item,'utf8'));
       });
 });
