@@ -9,7 +9,6 @@ var fs = require('fs');
 // Test the if the file exists
 fs.access('example_file2.txt', fs.constants.F_OK, (err) =>{
 	console.log('\n>Checking if the file exists');
-
 	if (err) 
 	{
 		console.error('File does not exist');
@@ -18,11 +17,11 @@ fs.access('example_file2.txt', fs.constants.F_OK, (err) =>{
 		console.log('\nCreating the file');
 		fs.writeFileSync("example_file2.txt", "Hello world!");
 
-	    // Test the if the file exists again
-	    fs.access('example_file2.txt', fs.constants.F_OK, (err) => {
-	    	console.log('\n> Checking if the file exists');
-	    	if (err)
-	    	{
+	       // Test the if the file exists again
+	       fs.access('example_file2.txt', fs.constants.F_OK, (err) =>{      
+	     	  console.log('\n> Checking if the file exists');
+	    	        if (err)
+	    	        {
 				console.error('File does not exist');
 			}
 			else 
@@ -30,16 +29,16 @@ fs.access('example_file2.txt', fs.constants.F_OK, (err) =>{
 				console.log('File does exist');
 				//Display the text on screen
 				fs.readFile('example_file2.txt',function(err,data) 
-        		{
-        			if(err)
-    				{
-        				return console.log(err);
-    				}
-    				console.log("File data: "+data.toString());
+        		        {
+        				if(err)
+    					{
+        					return console.log(err);
+    					}
+    					console.log("File data: "+data.toString());
 				});
 
 			}
-		});
+	        });
 	}
 	else
 	{
