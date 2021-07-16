@@ -18,8 +18,8 @@ glob('exe-1.txt', function(err, files) {
           console.log(fs.readFileSync(item,'utf8'));
           // Find and Replace the string in file
           replace({
-              regex: 'See',
-              replacement: 'Saw',
+              regex: 'Hi',
+              replacement: 'Hello',
               paths: [item],
               recursive: true,
               silent: true
