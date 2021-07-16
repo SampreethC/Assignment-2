@@ -7,7 +7,7 @@ var fs = require('fs');
 var replace = require('replace');
 
 
-glob('exe-1.txt', function(err, files) {
+glob('example_file1.txt', function(err, files) {
     if (err) 
     { 
         throw err; 
@@ -18,8 +18,8 @@ glob('exe-1.txt', function(err, files) {
           console.log(fs.readFileSync(item,'utf8'));
           // Find and Replace the string in file
           replace({
-              regex: 'Hi',
-              replacement: 'Hello',
+              regex: 'Soon',
+              replacement: 'Later',
               paths: [item],
               recursive: true,
               silent: true
