@@ -6,7 +6,7 @@ var fs=require("fs");
 
 try
 {
-    fs.appendFile('exe-1.txt','See U Later...',function(err) 
+    fs.appendFile('example_file1.txt','See U Later...',function(err) 
     {
         if(err)
         {
