@@ -28,8 +28,6 @@ if (checkFileExist('example_file1.txt'))
                 fs.readFileSync("example_file1.txt", "utf8"));
             }
         });
-
-
     }
     catch(err)
     {
