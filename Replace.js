@@ -17,17 +17,20 @@ if (checkFileExist('example_file1.txt'))
             if (err) { throw err; }
                 files.forEach(function(item, index, array) {
                 console.log(item + ' found');
+			
                 // Read file
                 console.log(fs.readFileSync(item,'utf8'));
-                    // Find and Replace string
-                    replace({
-                        regex: 'Hello',
+			
+                // Find and Replace string
+                replace({
+                	regex: 'Hello',
                         replacement: 'Hi',
                         paths: [item],
                         recursive: true,
                         silent: true
-                    });
-                    console.log('Replacement complete');
+                });
+                console.log('Replacement complete');
+			
                 // Read file
                 console.log(fs.readFileSync(item,'utf8'));
                 });
