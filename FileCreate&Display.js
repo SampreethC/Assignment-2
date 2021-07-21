@@ -14,19 +14,19 @@ else
 {
 	console.error('File does not exist');
 
-		// Create the file and write some text in it
-		console.log('\nCreating the file');
-		fs.writeFileSync("example_file.txt", "Hello world!");
+	// Create the file and write some text in it
+	console.log('\nCreating the file');
+	fs.writeFileSync("example_file.txt", "Hello world!");
 
-				//Display the text on screen
-				fs.readFile('example_file.txt',function(err,data) 
-        		{
-        			if(err)
-    				{
-        				return console.log(err);
-    				}
-    				console.log("File data: "+data.toString());
-				});
+	//Display the text on screen
+	fs.readFile('example_file.txt',function(err,data) 
+        {
+        	if(err)
+    		{
+        		return console.log(err);
+    		}
+    		console.log("File data: "+data.toString());
+	});
 
 }
 
